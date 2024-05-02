@@ -12,6 +12,9 @@ on:  # yamllint disable-line rule:truthy
   schedule:
     - cron: '0 0 * * *'
 
+env:
+  ANSIBLE_LINT_NODEPS: 1
+
 jobs:
   ansible-lint:
     uses: ansible/ansible-content-actions/.github/workflows/ansible_lint.yaml@main
